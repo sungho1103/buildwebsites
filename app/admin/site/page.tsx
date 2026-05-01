@@ -1,0 +1,2 @@
+import { AdminLayout } from '@/components/admin-layout';
+export default function Page(){return <AdminLayout><h1 className='text-xl font-bold mb-3'>교회 기본정보 관리</h1><form className='grid gap-3 max-w-2xl'><input className='border p-2' placeholder='교회명'/><input className='border p-2' placeholder='담임목사'/><textarea className='border p-2' placeholder='교회 소개'/><button className='bg-blue-600 text-white px-4 py-2 rounded w-fit'>저장</button></form></AdminLayout>}

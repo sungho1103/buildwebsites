@@ -1,0 +1,3 @@
+import Link from 'next/link';
+const links=[['/admin','대시보드'],['/admin/site','기본정보'],['/admin/videos','영상관리'],['/admin/posts','게시글'],['/admin/members','교인관리'],['/admin/offerings','헌금관리'],['/admin/edit-requests','수정요청']];
+export function AdminLayout({children}:{children:React.ReactNode}){return <div className='min-h-screen md:grid md:grid-cols-[220px_1fr]'><aside className='bg-slate-900 text-white p-4'><h2 className='font-bold mb-4'>교회 관리자</h2><nav className='space-y-2'>{links.map(([h,t])=><Link className='block rounded px-2 py-1 hover:bg-slate-700' href={h} key={h}>{t}</Link>)}</nav></aside><main><header className='border-b bg-white px-4 py-3 font-semibold'>관리자 시스템</header><div className='p-4'>{children}</div></main></div>}

@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body{@apply bg-slate-50 text-slate-900}
+.table{@apply w-full border-collapse bg-white}
+.th{@apply border-b bg-slate-100 px-3 py-2 text-left text-sm font-semibold}
+.td{@apply border-b px-3 py-2 text-sm}

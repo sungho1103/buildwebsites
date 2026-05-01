@@ -1,0 +1,3 @@
+import Link from 'next/link';
+const menus=['교회안내','설교영상','찬양영상','교회소식','게시판','오시는 길'];
+export default async function ChurchPage({params}:{params:Promise<{churchSlug:string}>}){const {churchSlug}=await params;return <main className='max-w-5xl mx-auto p-6 space-y-4'><h1 className='text-3xl font-bold'>{churchSlug} 교회</h1><div className='flex flex-wrap gap-2'>{menus.map(m=><span className='rounded-full bg-slate-200 px-3 py-1 text-sm' key={m}>{m}</span>)}</div><div className='grid grid-cols-2 gap-3'><Link href={`/${churchSlug}/sermons`}>설교영상</Link><Link href={`/${churchSlug}/praise`}>찬양영상</Link><Link href={`/${churchSlug}/news`}>교회소식</Link><Link href={`/${churchSlug}/board`}>게시판</Link></div></main>}

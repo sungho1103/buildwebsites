@@ -1,0 +1,3 @@
+import Link from 'next/link';
+const links=[['/master','대시보드'],['/master/churches','교회관리'],['/master/edit-requests','수정요청'],['/master/deployments','배포관리'],['/master/subscriptions','구독관리'],['/master/admins','관리자계정']];
+export function MasterLayout({children}:{children:React.ReactNode}){return <div className='min-h-screen md:grid md:grid-cols-[220px_1fr]'><aside className='bg-indigo-900 text-white p-4'><h2 className='font-bold mb-4'>마스터 관리자</h2><nav className='space-y-2'>{links.map(([h,t])=><Link className='block rounded px-2 py-1 hover:bg-indigo-700' href={h} key={h}>{t}</Link>)}</nav></aside><main><header className='border-b bg-white px-4 py-3 font-semibold'>마스터 운영자 시스템</header><div className='p-4'>{children}</div></main></div>}
