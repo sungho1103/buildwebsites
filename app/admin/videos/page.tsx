@@ -1,0 +1,3 @@
+import { AdminLayout } from '@/components/admin-layout';
+import { videos,posts,members,offerings,editRequests } from '@/lib/mock-data';
+export default function Page(){const data = videos;return <AdminLayout><h1 className='text-xl font-bold mb-3'>videos 관리</h1><div className='overflow-auto'><table className='table'><thead><tr><th className='th'>ID</th><th className='th'>제목/이름</th><th className='th'>상태</th></tr></thead><tbody>{(data as any[]).map((r)=><tr key={r.id}><td className='td'>{r.id}</td><td className='td'>{r.title||r.name||r.request_text||r.giver_name}</td><td className='td'>{r.status||r.type||'active'}</td></tr>)}</tbody></table></div></AdminLayout>}

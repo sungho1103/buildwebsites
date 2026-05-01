@@ -1,0 +1,3 @@
+import { MasterLayout } from '@/components/master-layout';
+import { churches,editRequests } from '@/lib/mock-data';
+export default function Page(){const data=(['edit-requests'][0]==='edit-requests'?editRequests:churches) as any[];return <MasterLayout><h1 className='text-xl font-bold mb-3'>edit-requests</h1><table className='table'><thead><tr><th className='th'>ID</th><th className='th'>이름/요청</th><th className='th'>상태</th></tr></thead><tbody>{data.map((r)=><tr key={r.id}><td className='td'>{r.id}</td><td className='td'>{r.name||r.request_text}</td><td className='td'>{r.site_status||r.status||'active'}</td></tr>)}</tbody></table></MasterLayout>}

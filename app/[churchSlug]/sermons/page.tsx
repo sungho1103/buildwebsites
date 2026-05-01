@@ -1,0 +1,1 @@
+export default async function Page({params}:{params:Promise<{churchSlug:string}>}){const {churchSlug}=await params;return <main className='max-w-4xl mx-auto p-6'><h1 className='text-2xl font-bold mb-4'>sermons</h1><p>{churchSlug} 교회 sermons 목록 (MVP 샘플)</p></main>}
